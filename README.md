@@ -2,7 +2,7 @@
 
 **Fuji Xerox DocuCentre S2011 打印驱动逆向：协议解析、编码器与 Linux 直打实现**
 
-这台机器只提供 Windows 驱动，官方不给 PCL/PS，也没有任何 Linux 支持。本项目从驱动捕获与反汇编出发，
+Fuji官方针对s2011这个机型没有任何 Linux 支持。本项目从驱动捕获与反汇编出发，
 完整还原了它的 **HBPL**（Host Based Printer Language）页面描述格式，并用纯开源工具链在 ARM 单板上
 重新实现了「PDF → HBPL → 打印机 9100 端口」的整条链路，**编码结果与官方驱动逐字节等价**。
 
