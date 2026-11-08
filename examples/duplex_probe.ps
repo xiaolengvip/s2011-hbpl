@@ -1,0 +1,41 @@
+%!PS-Adobe-3.0
+%%Title: duplex probe
+%%Pages: 2
+%%BoundingBox: 0 0 595 842
+%%EndComments
+
+% 四角标记：左上实心块 / 右上空心方框 / 左下竖条 / 右下横条
+/corners {
+  gsave
+  0 setgray
+  28 785 40 40 rectfill              % 左上 实心方块
+  512 782 moveto 46 0 rlineto 0 46 rlineto
+  -46 0 rlineto closepath 3 setlinewidth stroke   % 右上 空心方框
+  30 30 12 60 rectfill               % 左下 竖条
+  500 40 60 12 rectfill              % 右下 横条
+  grestore
+} def
+
+/header {
+  gsave
+  0 setgray
+  /Helvetica-Bold findfont 96 scalefont setfont
+  60 470 moveto show
+  /Helvetica findfont 26 scalefont setfont
+  60 420 moveto (A4 duplex test - check both sides) show
+  /Helvetica findfont 20 scalefont setfont
+  60 380 moveto (the top edge must be the same physical side on both faces) show
+  grestore
+} def
+
+% ---- page 1 ----
+corners
+(FRONT) header
+showpage
+
+% ---- page 2 ----
+corners
+(BACK) header
+showpage
+
+%%EOF

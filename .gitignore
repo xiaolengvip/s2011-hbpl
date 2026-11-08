@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# 由 hex 生成 / 需要本地编译的产物
+src/skel/*.bin
+src/pbmtrans
+*.o
+
+# 中间文件
+*.pbm
+*.jbg
+*.log
+
+# 捕获的原始作业（含厂商数据，不入库）
+*.prn
+!assets/*.prn.hex
